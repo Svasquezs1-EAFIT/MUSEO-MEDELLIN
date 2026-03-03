@@ -3,7 +3,7 @@ export default function PdfPage() {
   return (
     <section className="pdf-page">
       <header style={{marginBottom: 12}}>
-        <h1>Documento del Proyecto (PDF)</h1>
+        <h1>Guía de desarrollo de proyecto</h1>
         <div style={{display:'flex', gap:8, flexWrap:'wrap'}}>
           <a className="btn" href={pdfUrl} target="_blank" rel="noopener noreferrer">Abrir en pestaña nueva</a>
           <a className="btn" href={pdfUrl} download>Descargar PDF</a>
