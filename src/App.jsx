@@ -2,7 +2,9 @@
 import { Routes, Route, Link, NavLink } from 'react-router-dom'
 import Home from './pages/Home'
 import SiteDetail from './pages/SiteDetail'
-import PdfPage from './pages/PdfPage' // Si aún no la tienes, puedes comentar esta línea y su <Route />
+import PdfPage from './pages/PdfPage' 
+import PdfPage2 from './pages/PdfPage2'
+
 
 export default function App() {
   return (
@@ -21,6 +23,12 @@ export default function App() {
           <NavLink to="/documento">
             {({ isActive }) => (
               <span style={{ color: isActive ? '#4cc9f0' : '#fff' }}>Documento (PDF)</span>
+            )}
+          </NavLink>
+
+          <NavLink to="/documento2">
+            {({ isActive }) => (
+              <span style={{ color: isActive ? '#4cc9f0' : '#fff' }}>Segundo Documento (PDF)</span>
             )}
           </NavLink>
 
@@ -43,7 +51,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/lugar/:id" element={<SiteDetail />} />
           <Route path="/documento" element={<PdfPage />} />
-          {/* Si no usarás la página del PDF aún, elimina o comenta la línea anterior */}
+          <Route path="/documento2" element={<PdfPage2 />} />
         </Routes>
       </main>
 
