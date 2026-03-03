@@ -2,20 +2,43 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on PR
-on: pull_request
+
+on:
+  pull_request:
+    branches: [main]
+
 permissions:
   checks: write
   contents: read
   pull-requests: write
+
 jobs:
   build_and_preview:
+    # Si tu PR es interno (misma repo), puedes dejar este "if".
+    # Si te da dudas, elimínalo.
     if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - run: npm ci && npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Opcional, pero recomendable: fijar versión de Node usada por Vite
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install & Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy Preview to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MUSEO_MEDELLIN }}
-          projectId: museo-medellin
+          projectId: museo-medellin1   # <-- REEMPLAZA por el ID REAL
+          # channelId: pr-${{ github.event.number }} # (opcional; la acción usa un canal efímero por defecto)
+          # expires: 7d                 # (opcional; para caducar el canal de preview)
