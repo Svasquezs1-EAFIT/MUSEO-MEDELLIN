@@ -22,13 +22,13 @@ export default function App() {
 
           <NavLink to="/documento">
             {({ isActive }) => (
-              <span style={{ color: isActive ? '#4cc9f0' : '#fff' }}>Documento (PDF)</span>
+              <span style={{ color: isActive ? '#4cc9f0' : '#fff' }}>Guia proyecto IA</span>
             )}
           </NavLink>
 
           <NavLink to="/documento2">
             {({ isActive }) => (
-              <span style={{ color: isActive ? '#4cc9f0' : '#fff' }}>Segundo Documento (PDF)</span>
+              <span style={{ color: isActive ? '#4cc9f0' : '#fff' }}>Antioquia 2040</span>
             )}
           </NavLink>
 

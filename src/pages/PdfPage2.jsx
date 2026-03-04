@@ -19,7 +19,7 @@ export default function PdfPage2() {
 
       <div style={{ border: "1px solid #1f2832", borderRadius: "10px", overflow: "hidden" }}>
         <iframe
-          title="Segundo Documento PDF"
+          title="Antioquia 2040"
           src={`${pdfUrl}#view=FitH`}
           style={{ width: "100%", height: "85vh", border: 0, background: "#fff" }}
         />

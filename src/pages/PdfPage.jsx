@@ -3,7 +3,7 @@ export default function PdfPage() {
   return (
     <section className="pdf-page">
       <header style={{marginBottom: 12}}>
-        <h1>guía de desarrollo de proyecto</h1>
+        <h1>Guía de desarrollo de proyecto</h1>
         <div style={{display:'flex', gap:8, flexWrap:'wrap'}}>
           <a className="btn" href={pdfUrl} target="_blank" rel="noopener noreferrer">Abrir en pestaña nueva</a>
           <a className="btn" href={pdfUrl} download>Descargar PDF</a>
@@ -11,7 +11,7 @@ export default function PdfPage() {
       </header>
       <div style={{border:'1px solid #1f2832', borderRadius:10, overflow:'hidden'}}>
         <iframe
-          title="Resolución guía IA (PDF)"
+          title="Guia proyecto IA"
           src={`${pdfUrl}#view=FitH`}
           style={{ width: '100%', height: '85vh', border: 0, background: '#fff' }}
         />
