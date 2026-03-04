@@ -1,11 +1,12 @@
 // src/pages/SiteDetail.jsx
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import sitios from '../data/sitios'
 import MapView from '../components/MapView'
 
 export default function SiteDetail() {
   const { id } = useParams()
   const sitio = sitios.find(s => String(s.id) === String(id))
+  const navigate = useNavigate()
 
   if (!sitio) {
     return (
@@ -21,7 +22,8 @@ export default function SiteDetail() {
 
   return (
     <article className="detail">
-      <Link to=".." relative="path" className="back">← Volver</Link>
+      {/* Botón de volver usando el hook useNavigate */}
+      <button onClick={() => navigate(-1)} className="back">← Volver</button>
 
       {/* Encabezado con portada y datos básicos */}
       <header className="detail-header">
