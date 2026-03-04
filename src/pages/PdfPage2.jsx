@@ -5,7 +5,7 @@ export default function PdfPage2() {
   return (
     <section className="pdf-page">
       <header style={{ marginBottom: "12px" }}>
-        <h1>Segundo Documento PDF</h1>
+        <h1>Antioquia 2040</h1>
 
         <div style={{ display: "flex", gap: "10px", marginTop: "6px" }}>
           <a className="btn" href={pdfUrl} target="_blank" rel="noopener noreferrer">
