@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import SiteDetail from './pages/SiteDetail'
 import PdfPage from './pages/PdfPage' 
 import PdfPage2 from './pages/PdfPage2'
+import Chatbot from './components/Chatbot/Chatbot';
 
 
 export default function App() {
@@ -61,6 +62,7 @@ export default function App() {
           Proyecto educativo · React + Leaflet · {new Date().getFullYear()}
         </small>
       </footer>
+      <Chatbot />
     </div>
   )
 }
