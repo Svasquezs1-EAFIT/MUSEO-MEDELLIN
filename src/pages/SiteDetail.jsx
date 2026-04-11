@@ -1,6 +1,6 @@
 // src/pages/SiteDetail.jsx
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import sitios from '../data/sitios'
+import sitios from '../data/places'
 import MapView from '../components/MapView'
 
 export default function SiteDetail() {
@@ -80,7 +80,7 @@ export default function SiteDetail() {
 
         {!hasCoords ? (
           <p className="map-hint" style={{ marginTop: 8 }}>
-            Falta coordenada para este lugar. Agrega <code>coords: &#123; lat, lng &#125;</code> en <code>src/data/sitios.js</code>.
+            Falta coordenada para este lugar. Agrega <code>coords: &#123; lat, lng &#125;</code> en <code>src/data/places.js</code>.
           </p>
         ) : (
           <a
