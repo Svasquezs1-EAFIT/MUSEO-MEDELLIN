@@ -1,69 +1,35 @@
-// src/App.jsx
-import { Routes, Route, Link, NavLink } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
 import Home from './pages/Home'
+import PlacesPage from './pages/PlacesPage'
+import StoriesPage from './pages/StoriesPage'
+import AboutProject from './pages/AboutProject'
 import SiteDetail from './pages/SiteDetail'
-import PdfPage from './pages/PdfPage' 
+import PdfPage from './pages/PdfPage'
 import PdfPage2 from './pages/PdfPage2'
-import Chatbot from './components/Chatbot/Chatbot';
-
+import Chatbot from './components/Chatbot/Chatbot'
 
 export default function App() {
   return (
     <div className="app">
-      {/* Barra superior */}
-      <header className="topbar">
-        <Link to="/" className="logo">Museo Virtual Medellín</Link>
+      <Header />
 
-        <nav style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-          <NavLink to="/" end>
-            {({ isActive }) => (
-              <span style={{ color: isActive ? '#4cc9f0' : '#fff' }}>Inicio</span>
-            )}
-          </NavLink>
-
-          <NavLink to="/documento">
-            {({ isActive }) => (
-              <span style={{ color: isActive ? '#4cc9f0' : '#fff' }}>Guia proyecto IA</span>
-            )}
-          </NavLink>
-
-          <NavLink to="/documento2">
-            {({ isActive }) => (
-              <span style={{ color: isActive ? '#4cc9f0' : '#fff' }}>Antioquia 2040</span>
-            )}
-          </NavLink>
-
-          {/* Atribución requerida a OpenStreetMap */}
-          <a
-            href="https://www.openstreetmap.org/copyright"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: '#8b9099', textDecoration: 'none', marginLeft: 8 }}
-            title="Atribución de datos del mapa"
-          >
-            Datos © OpenStreetMap
-          </a>
-        </nav>
-      </header>
-
-      {/* Contenido principal con enrutamiento */}
       <main className="container">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/explorar" element={<Home />} />
+          <Route path="/lugares" element={<PlacesPage />} />
+          <Route path="/historias" element={<StoriesPage />} />
+          <Route path="/proyecto" element={<AboutProject />} />
           <Route path="/lugar/:id" element={<SiteDetail />} />
           <Route path="/documento" element={<PdfPage />} />
           <Route path="/documento2" element={<PdfPage2 />} />
         </Routes>
       </main>
 
-      {/* Pie de página */}
-      <footer className="footer">
-        <small>
-          Proyecto educativo · React + Leaflet · {new Date().getFullYear()}
-        </small>
-      </footer>
+      <Footer />
       <Chatbot />
     </div>
   )
 }
-
