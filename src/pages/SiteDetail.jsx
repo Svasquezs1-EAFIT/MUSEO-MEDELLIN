@@ -1,6 +1,6 @@
 // src/pages/SiteDetail.jsx
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import sitios from '../data/sitios'
+import sitios from '../data/places'
 import MapView from '../components/MapView'
 
 export default function SiteDetail() {

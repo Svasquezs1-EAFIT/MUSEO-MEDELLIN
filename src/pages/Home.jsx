@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import sitiosData from '../data/sitios'
+import sitiosData from '../data/places'
 import MapView from '../components/MapView'
 import SiteCard from '../components/SiteCard'
 
