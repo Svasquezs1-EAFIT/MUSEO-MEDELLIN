@@ -9,10 +9,12 @@ import SiteDetail from './pages/SiteDetail'
 import PdfPage from './pages/PdfPage'
 import PdfPage2 from './pages/PdfPage2'
 import Chatbot from './components/Chatbot/Chatbot'
+import ScrollToTop from './components/layout/ScrollToTop'
 
 export default function App() {
   return (
     <div className="app">
+      <ScrollToTop />
       <Header />
 
       <main className="container">
