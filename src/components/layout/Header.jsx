@@ -2,7 +2,6 @@ import { Link, NavLink } from 'react-router-dom'
 
 const navItems = [
   { to: '/', label: 'Inicio', end: true },
-  { to: '/explorar', label: 'Explorar mapa' },
   { to: '/lugares', label: 'Lugares' },
   { to: '/historias', label: 'Historias' },
   { to: '/proyecto', label: 'Proyecto' },
