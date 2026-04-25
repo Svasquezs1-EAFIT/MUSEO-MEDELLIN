@@ -547,3 +547,12 @@ a:focus-visible {
     height: 58px;
   }
 }
+
+/* DESCRIPCIÓN EN CARD */
+.card-description {
+  display: -webkit-box;
+  overflow: hidden;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
