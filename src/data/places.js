@@ -443,7 +443,11 @@ export const places = [
       },
     ],
     tags: ['Zona Norte', 'ciencia', 'tecnología', 'educación', 'transformación urbana'],
-    imagenes: [PLACEHOLDER_IMAGE],
+    imagenes: [
+      '/images/parque-explora/1.png',
+      '/images/parque-explora/2.png',
+      '/images/parque-explora/3.png',
+    ],
   }),
 
   createPlace({
@@ -478,7 +482,11 @@ export const places = [
       },
     ],
     tags: ['Zona Norte', 'naturaleza', 'botánica', 'educación ambiental', 'Fiesta del Libro'],
-    imagenes: [PLACEHOLDER_IMAGE],
+    imagenes: [
+      '/images/jardin-botanico/1.png',
+      '/images/jardin-botanico/2.png',
+      '/images/jardin-botanico/3.png',
+    ],
   }),
 
   createPlace({
@@ -513,7 +521,11 @@ export const places = [
       },
     ],
     tags: ['Prado Centro', 'patrimonio urbano', 'arquitectura', 'ciudad jardín'],
-    imagenes: [PLACEHOLDER_IMAGE],
+    imagenes: [
+      '/images/barrio-prado-centro/1.png',
+      '/images/barrio-prado-centro/2.png',
+      '/images/barrio-prado-centro/3.png',
+    ],
   }),
 
   createPlace({
@@ -548,7 +560,11 @@ export const places = [
       },
     ],
     tags: ['Belén', 'Pueblito Paisa', 'mirador', 'tradición paisa', 'cerro tutelar'],
-    imagenes: [PLACEHOLDER_IMAGE],
+    imagenes: [
+      '/images/cerro-nutibara-pueblito-paisa/1.png',
+      '/images/cerro-nutibara-pueblito-paisa/2.png',
+      '/images/cerro-nutibara-pueblito-paisa/3.png',
+    ],
   }),
 
   createPlace({
@@ -583,7 +599,10 @@ export const places = [
       },
     ],
     tags: ['Santo Domingo', 'parque biblioteca', 'urbanismo social', 'comunidad', 'educación'],
-    imagenes: [PLACEHOLDER_IMAGE],
+    imagenes: [
+      '/images/parque-biblioteca-santo-domingo/1.png',
+      '/images/parque-biblioteca-santo-domingo/2.png',
+    ],
   }),
 
   createPlace({
@@ -618,7 +637,11 @@ export const places = [
       },
     ],
     tags: ['Centro', 'Plaza de las Luces', 'espacio público', 'mercado', 'renovación urbana'],
-    imagenes: [PLACEHOLDER_IMAGE],
+    imagenes: [
+      '/images/plaza-cisneros/1.png',
+      '/images/plaza-cisneros/2.png',
+      '/images/plaza-cisneros/3.png',
+    ],
   }),
 
   createPlace({
@@ -653,7 +676,11 @@ export const places = [
       },
     ],
     tags: ['Centro', 'patrimonio', 'arquitectura', 'industria', 'comercio'],
-    imagenes: [PLACEHOLDER_IMAGE],
+    imagenes: [
+      '/images/edificios-carre-vasquez/1.png',
+      '/images/edificios-carre-vasquez/2.png',
+      '/images/edificios-carre-vasquez/3.png',
+    ],
   }),
 
   createPlace({
@@ -688,7 +715,11 @@ export const places = [
       },
     ],
     tags: ['Santa Elena', 'naturaleza', 'ruralidad', 'silleteros', 'turismo comunitario'],
-    imagenes: [PLACEHOLDER_IMAGE],
+    imagenes: [
+      '/images/parque-arvi/1.png',
+      '/images/parque-arvi/2.png',
+      '/images/parque-arvi/3.png',
+    ],
   }),
 
   createPlace({
@@ -723,7 +754,10 @@ export const places = [
       },
     ],
     tags: ['Carlos E. Restrepo', 'biblioteca', 'literatura', 'archivo fotográfico', 'memoria'],
-    imagenes: [PLACEHOLDER_IMAGE],
+    imagenes: [
+      '/images/biblioteca-publica-piloto/1.png',
+      '/images/biblioteca-publica-piloto/2.png',
+    ],
   }),
 
   createPlace({
@@ -758,7 +792,11 @@ export const places = [
       },
     ],
     tags: ['Centro', 'Parque Bolívar', 'religión', 'arquitectura', 'patrimonio'],
-    imagenes: [PLACEHOLDER_IMAGE],
+    imagenes: [
+      '/images/catedral-metropolitana/1.png',
+      '/images/catedral-metropolitana/2.png',
+      '/images/catedral-metropolitana/3.png',
+    ],
   })
 ]
 
