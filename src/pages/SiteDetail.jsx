@@ -2,6 +2,7 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import sitios from '../data/places'
 import MapView from '../components/MapView'
+import ImageCarousel from '../components/site/ImageCarousel'
 
 export default function SiteDetail() {
   const { id } = useParams()
@@ -68,6 +69,13 @@ export default function SiteDetail() {
         </section>
       )}
 
+      {sitio.imagenes && sitio.imagenes.length > 0 && (
+        <section className="detail-section">
+          <h3>Galería del lugar</h3>
+          <ImageCarousel images={sitio.imagenes} alt={sitio.nombre} />
+        </section>
+      )}
+      
       {/* Mapa + botón "Cómo llegar" */}
       <section className="detail-section">
         <h3>Ubicación en el mapa</h3>
