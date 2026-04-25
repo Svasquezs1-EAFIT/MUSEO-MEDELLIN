@@ -26,6 +26,15 @@ export const CATEGORIAS_CULTURALES = [
   'arte',
   'literatura',
   'música',
+  'ciencia',
+  'tecnología',
+  'patrimonio',
+  'naturaleza',
+  'arquitectura',
+  'religión',
+  'comunidad',
+  'ruralidad',
+  'educación',
 ]
 
 export const CAPAS = [

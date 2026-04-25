@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Imagen placeholder de lugar cultural">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111a"/>
+      <stop offset="55%" stop-color="#132131"/>
+      <stop offset="100%" stop-color="#0d1824"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#6ee7f9" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#6ee7f9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#glow)"/>
+  <circle cx="600" cy="310" r="92" fill="none" stroke="#6ee7f9" stroke-width="10" opacity="0.85"/>
+  <path d="M600 235c-46 0-78 35-78 78 0 58 78 155 78 155s78-97 78-155c0-43-32-78-78-78zm0 113a38 38 0 1 1 0-76 38 38 0 0 1 0 76z" fill="#6ee7f9" opacity="0.92"/>
+  <text x="600" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#eef6fb">Museo Virtual Medellín</text>
+  <text x="600" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#9cb0c3">Lugar cultural por documentar visualmente</text>
+</svg>
