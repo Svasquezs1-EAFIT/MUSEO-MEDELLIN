@@ -20,7 +20,6 @@ export default function App() {
       <main className="container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/explorar" element={<Home />} />
           <Route path="/lugares" element={<PlacesPage />} />
           <Route path="/historias" element={<StoriesPage />} />
           <Route path="/proyecto" element={<AboutProject />} />
