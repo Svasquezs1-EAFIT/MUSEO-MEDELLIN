@@ -1,47 +1,41 @@
-import { useState } from 'react';
-import { MUSEUMS, KEYWORDS } from '../data/museumData'; // Asegúrate de que la ruta sea correcta
+import { useState } from 'react'
+import { getPlaceChatbotResponse } from '../utils/placeChatbot'
 
 export const useChat = () => {
   const [messages, setMessages] = useState([
-    { id: 1, text: "¡Hola! Soy el guía virtual de los museos de Medellín. ¿Sobre qué museo quieres información?", sender: 'bot' }
-  ]);
+    {
+      id: 1,
+      text: '¡Hola! Soy el guía virtual de Museo Virtual Medellín. Puedo ayudarte con información sobre lugares, horarios, ubicación, categorías culturales y recomendaciones. ¿Qué lugar quieres explorar?',
+      sender: 'bot',
+    },
+  ])
 
   const sendMessage = (userInput) => {
-    if (!userInput.trim()) return;
+    if (!userInput.trim()) return
 
-    // 1. Agregar mensaje del usuario al chat
-    const newUserMessage = { id: Date.now(), text: userInput, sender: 'user' };
-    setMessages(prev => [...prev, newUserMessage]);
-
-    // 2. Procesar la respuesta
-    const inputCleaned = userInput.toLowerCase();
-    let responseText = "Lo siento, solo tengo información sobre el Museo de Antioquia, El Castillo y el Palacio de la Cultura. ¿Te gustaría saber de alguno de ellos?";
-    let museumKey = null;
-
-    // Buscar si alguna palabra clave está en el mensaje del usuario
-    for (let key in KEYWORDS) {
-      if (inputCleaned.includes(key)) {
-        museumKey = KEYWORDS[key];
-        break;
-      }
+    const newUserMessage = {
+      id: Date.now(),
+      text: userInput,
+      sender: 'user',
     }
 
-    if (museumKey) {
-      const info = MUSEUMS[museumKey];
-      responseText = `${info.name}: ${info.description} Puedes visitarlo en el horario: ${info.schedule}`;
-    }
+    setMessages((prev) => [...prev, newUserMessage])
 
-    // 3. Simular un pequeño retraso para que parezca natural y agregar respuesta del bot
+    const response = getPlaceChatbotResponse(userInput)
+
     setTimeout(() => {
-      const botResponse = { 
-        id: Date.now() + 1, 
-        text: responseText, 
+      const botResponse = {
+        id: Date.now() + 1,
+        text: response.text,
         sender: 'bot',
-        image: museumKey ? MUSEUMS[museumKey].image : null // Opcional: enviar imagen si se encuentra el museo
-      };
-      setMessages(prev => [...prev, botResponse]);
-    }, 600);
-  };
+        image: response.image || null,
+        link: response.link || null,
+        linkLabel: response.linkLabel || null,
+      }
 
-  return { messages, sendMessage };
-};
+      setMessages((prev) => [...prev, botResponse])
+    }, 500)
+  }
+
+  return { messages, sendMessage }
+}
