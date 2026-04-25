@@ -435,3 +435,115 @@ a:focus-visible {
     justify-content: center;
   }
 }
+
+/* CARRUSEL */
+
+.image-carousel {
+  margin: 0;
+}
+
+.carousel-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(49, 80, 107, 0.35);
+  background: rgba(10, 19, 28, 0.8);
+}
+
+.carousel-frame img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(238, 246, 251, 0.28);
+  border-radius: 50%;
+  background: rgba(7, 17, 26, 0.72);
+  color: var(--text);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+}
+
+.carousel-control:hover {
+  background: rgba(56, 189, 248, 0.22);
+  border-color: rgba(110, 231, 249, 0.65);
+}
+
+.carousel-control-left {
+  left: 12px;
+}
+
+.carousel-control-right {
+  right: 12px;
+}
+
+.carousel-counter {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(7, 17, 26, 0.72);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+}
+
+.carousel-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(86px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.carousel-thumbnail {
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+}
+
+.carousel-thumbnail:hover,
+.carousel-thumbnail.active {
+  border-color: var(--accent);
+}
+
+.carousel-thumbnail img {
+  width: 100%;
+  height: 72px;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .carousel-frame img {
+    height: 240px;
+  }
+
+  .carousel-control {
+    width: 38px;
+    height: 38px;
+    font-size: 1.7rem;
+  }
+
+  .carousel-thumbnails {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
+
+  .carousel-thumbnail img {
+    height: 58px;
+  }
+}
