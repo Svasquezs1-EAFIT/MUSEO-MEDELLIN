@@ -3,7 +3,7 @@ import SiteCard from '../components/SiteCard'
 
 export default function PlacesPage() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="hero">
         <h1>Lugares</h1>
         <p>Explora el catálogo actual de lugares culturales e históricos.</p>

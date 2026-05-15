@@ -1,6 +1,6 @@
 export default function StoriesPage() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="hero">
         <h1>Historias</h1>
         <p>Espacio editorial para relatos, crónicas y textos conectados con el territorio.</p>

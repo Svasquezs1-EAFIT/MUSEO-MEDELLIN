@@ -22,7 +22,7 @@ export default function SiteDetail() {
   const hasCoords = Boolean(sitio.coords && typeof sitio.coords.lat === 'number' && typeof sitio.coords.lng === 'number')
 
   return (
-    <article className="detail">
+    <article className="detail" data-aos="fade-up">
       {/* Botón de volver usando el hook useNavigate */}
       <button onClick={() => navigate(-1)} className="back">← Volver</button>
 

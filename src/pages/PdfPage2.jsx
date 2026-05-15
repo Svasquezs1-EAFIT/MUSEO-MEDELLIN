@@ -3,7 +3,7 @@ export default function PdfPage2() {
   const pdfUrl = "/docs/R_Plan-estrategico-Agenda-Antioquia-2040-1.pdf"
 
   return (
-    <section className="pdf-page">
+    <section className="pdf-page" data-aos="fade-up" style={{ padding: "20px" }}>
       <header style={{ marginBottom: "12px" }}>
         <h1>Antioquia 2040</h1>
 
