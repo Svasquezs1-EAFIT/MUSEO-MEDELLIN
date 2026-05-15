@@ -37,7 +37,7 @@ export default function Home() {
   }
 
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="hero">
         <h1>Museo Virtual Medellín</h1>
         <p>Explora espacios culturales de la ciudad: memoria, arte e identidad.</p>
@@ -74,7 +74,9 @@ export default function Home() {
       ) : (
         <div className="grid">
           {sitios.map((s) => (
-            <SiteCard key={s.id} sitio={s} />
+            <div key={s.id} data-aos="fade-up">
+              <SiteCard sitio={s} />
+            </div>
           ))}
         </div>
       )}

@@ -1,7 +1,7 @@
 export default function PdfPage() {
   const pdfUrl = "/docs/Resolucion%20guia%20IA.pdf"
   return (
-    <section className="pdf-page">
+    <section className="pdf-page" data-aos="fade-up" style={{ padding: 20 }}>
       <header style={{marginBottom: 12}}>
         <h1>Guía de desarrollo de proyecto</h1>
         <div style={{display:'flex', gap:8, flexWrap:'wrap'}}>

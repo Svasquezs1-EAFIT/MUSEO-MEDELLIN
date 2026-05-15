@@ -797,7 +797,632 @@ export const places = [
       '/images/catedral-metropolitana/2.png',
       '/images/catedral-metropolitana/3.png',
     ],
+  }),
+
+  // NUEVOS LUGARES
+
+  createPlace({
+    id: '21',
+    slug: 'casa-cultura-rionegro',
+    nombre: 'Casa de la Cultura de Rionegro',
+
+    municipio: 'Rionegro',
+    barrio: 'Centro',
+    direccion: 'Carrera 51 #49-09',
+
+    horarios:
+      'Lunes a viernes de 8:00 a.m. a 5:00 p.m.; sábados de 9:00 a.m. a 1:00 p.m.',
+
+    tipoLugar: 'comunitario',
+    visibilidad: 'popular',
+
+    categoriasCulturales: [
+      'memoria',
+      'patrimonio',
+      'educación',
+      'arte',
+    ],
+
+    capas: [
+      'memoria-historica',
+      'espacios-comunitarios',
+    ],
+
+    descripcionBreve:
+      'Principal espacio de producción y difusión cultural del municipio de Rionegro.',
+
+    historiaContexto:
+      'La Casa de la Cultura de Rionegro funciona como nodo cultural del Oriente Antioqueño y como espacio de preservación de memoria histórica y artística.',
+
+    relatoNarrativo:
+      'Ubicada en el centro histórico de Rionegro, conecta procesos culturales contemporáneos con la historia republicana del municipio.',
+
+    ofertaCultural:
+      'Talleres artísticos, exposiciones, memoria histórica y actividades comunitarias.',
+
+    valorIdentitario:
+      'Representa uno de los principales espacios culturales e históricos del Oriente Antioqueño.',
+
+    coords: {
+      lat: 6.1551,
+      lng: -75.3737,
+    },
+
+    lugaresRelacionados: ['1', '10'],
+
+    bibliografia: [
+      {
+        titulo: 'Casa de la Cultura de Rionegro',
+        url: 'https://www.rionegro.gov.co',
+      },
+    ],
+
+    enlacesExternos: [
+      {
+        titulo: 'Alcaldía de Rionegro',
+        url: 'https://www.rionegro.gov.co',
+      },
+    ],
+
+    tags: [
+      'Rionegro',
+      'cultura',
+      'patrimonio',
+      'oriente antioqueño',
+    ],
+
+    imagenes: [
+      '/images/rionegro-cultura/1.png',
+      '/images/rionegro-cultura/2.png',
+    ],
+  }),
+
+  createPlace({
+    id: '22',
+    slug: 'museo-juan-del-corral',
+
+    nombre: 'Museo Juan del Corral',
+
+    municipio: 'Santa Fe de Antioquia',
+    barrio: 'Centro Histórico',
+
+    direccion: 'Calle 11 #10-29',
+
+    horarios:
+      'Martes a viernes de 9:00 a.m. a 5:00 p.m.',
+
+    tipoLugar: 'histórico',
+    visibilidad: 'popular',
+
+    categoriasCulturales: [
+      'memoria',
+      'patrimonio',
+      'historia',
+    ],
+
+    capas: [
+      'memoria-historica',
+    ],
+
+    descripcionBreve:
+      'Museo dedicado a la independencia antioqueña y a la memoria republicana.',
+
+    historiaContexto:
+      'La casa donde vivió Juan del Corral conserva documentos y objetos relacionados con la independencia y abolición de la esclavitud en Antioquia.',
+
+    relatoNarrativo:
+      'Uno de los lugares históricos más importantes de Antioquia y símbolo de la memoria republicana.',
+
+    ofertaCultural:
+      'Recorridos históricos, exposiciones y actividades pedagógicas.',
+
+    valorIdentitario:
+      'Preserva parte esencial de la historia política y social de Antioquia.',
+
+    coords: {
+      lat: 6.5567,
+      lng: -75.8271,
+    },
+
+    lugaresRelacionados: ['21'],
+
+    bibliografia: [
+      {
+        titulo: 'Museo Juan del Corral',
+        url: 'https://es.wikipedia.org/wiki/Juan_del_Corral',
+      },
+    ],
+
+    enlacesExternos: [
+      {
+        titulo: 'Santa Fe de Antioquia',
+        url: 'https://www.santafedeantioquia-antioquia.gov.co',
+      },
+    ],
+
+    tags: [
+      'independencia',
+      'historia',
+      'museo',
+      'patrimonio',
+    ],
+
+    imagenes: [
+      '/images/juan-del-corral/1.png',
+      '/images/juan-del-corral/2.png',
+    ],
+  }),
+
+  createPlace({
+    id: '23',
+
+    slug: 'parque-de-los-deseos',
+
+    nombre: 'Parque de los Deseos',
+
+    municipio: 'Medellín',
+    barrio: 'Zona Norte',
+
+    direccion: 'Carrera 52 #71-117',
+
+    horarios:
+      'Abierto todos los días',
+
+    tipoLugar: 'comunitario',
+    visibilidad: 'popular',
+
+    categoriasCulturales: [
+      'arte',
+      'ciencia',
+      'comunidad',
+    ],
+
+    capas: [
+      'cultura-cotidiana',
+      'espacios-comunitarios',
+    ],
+
+    descripcionBreve:
+      'Espacio público cultural que conecta ciencia, ciudadanía y encuentro social.',
+
+    historiaContexto:
+      'Hace parte de la transformación urbana y cultural del norte de Medellín durante el siglo XXI.',
+
+    relatoNarrativo:
+      'Un lugar donde astronomía, agua y espacio público se mezclan para crear experiencias culturales abiertas.',
+
+    ofertaCultural:
+      'Eventos culturales, cine al aire libre, encuentros ciudadanos y actividades pedagógicas.',
+
+    valorIdentitario:
+      'Es uno de los espacios públicos culturales más emblemáticos de Medellín.',
+
+    coords: {
+      lat: 6.2705,
+      lng: -75.5658,
+    },
+
+    lugaresRelacionados: ['8', '11', '12'],
+
+    bibliografia: [
+      {
+        titulo: 'Parque de los Deseos',
+        url: 'https://es.wikipedia.org/wiki/Parque_de_los_Deseos',
+      },
+    ],
+
+    enlacesExternos: [
+      {
+        titulo: 'Parque Explora',
+        url: 'https://www.parqueexplora.org',
+      },
+    ],
+
+    tags: [
+      'Medellín',
+      'cultura',
+      'espacio público',
+      'ciencia',
+    ],
+
+    imagenes: [
+      '/images/parque-deseos/1.png',
+      '/images/parque-deseos/2.png',
+    ],
+  }),
+
+  createPlace({
+    id: '24',
+
+    slug: 'catedral-san-nicolas-el-magno',
+
+    nombre: 'Catedral de San Nicolás El Magno',
+
+    municipio: 'Rionegro',
+    barrio: 'Centro Histórico',
+
+    direccion: 'Parque Simón Bolívar, Rionegro',
+
+    horarios:
+      'Abierta todos los días para visitas y servicios religiosos.',
+
+    tipoLugar: 'histórico',
+    visibilidad: 'popular',
+
+    categoriasCulturales: [
+      'patrimonio',
+      'religión',
+      'arquitectura',
+      'memoria',
+    ],
+
+    capas: [
+      'memoria-historica',
+    ],
+
+    descripcionBreve:
+      'Uno de los templos coloniales más importantes del Oriente Antioqueño.',
+
+    historiaContexto:
+      'La Concatedral de San Nicolás El Magno ha sido centro religioso, político y cultural de Rionegro desde el período colonial.',
+
+    relatoNarrativo:
+      'Su arquitectura y presencia en el parque principal convierten este templo en uno de los grandes símbolos históricos de Rionegro.',
+
+    ofertaCultural:
+      'Visitas patrimoniales, recorridos históricos y celebraciones religiosas.',
+
+    valorIdentitario:
+      'Representa parte esencial de la memoria arquitectónica y espiritual del Oriente Antioqueño.',
+
+    coords: {
+      lat: 6.1555,
+      lng: -75.3733,
+    },
+
+    lugaresRelacionados: ['21'],
+
+    bibliografia: [
+      {
+        titulo: 'Concatedral San Nicolás El Magno',
+        url: 'https://es.wikipedia.org/wiki/Concatedral_de_San_Nicol%C3%A1s_el_Magno',
+      },
+    ],
+
+    enlacesExternos: [
+      {
+        titulo: 'Diócesis Sonsón Rionegro',
+        url: 'https://www.diocesisdesonsonrionegro.org',
+      },
+    ],
+
+    tags: [
+      'Rionegro',
+      'catedral',
+      'patrimonio',
+      'arquitectura colonial',
+    ],
+
+    imagenes: [
+      '/images/catedral-rionegro/1.png',
+      '/images/catedral-rionegro/2.png',
+    ],
+  }),
+
+  createPlace({
+    id: '25',
+
+    slug: 'basilica-menor-de-marinilla',
+
+    nombre: 'Basílica Menor de Marinilla',
+
+    municipio: 'Marinilla',
+    barrio: 'Centro',
+
+    direccion: 'Parque principal de Marinilla',
+
+    horarios:
+      'Abierta todos los días para visitas y servicios religiosos.',
+
+    tipoLugar: 'histórico',
+    visibilidad: 'popular',
+
+    categoriasCulturales: [
+      'patrimonio',
+      'religión',
+      'arte',
+      'arquitectura',
+    ],
+
+    capas: [
+      'memoria-historica',
+    ],
+
+    descripcionBreve:
+      'Importante templo colonial y referente patrimonial del Oriente Antioqueño.',
+
+    historiaContexto:
+      'La Basílica Menor de Marinilla conserva importantes expresiones del arte colonial y de la historia religiosa del altiplano antioqueño.',
+
+    relatoNarrativo:
+      'El templo domina el paisaje urbano de Marinilla y funciona como eje cultural y espiritual del municipio.',
+
+    ofertaCultural:
+      'Recorridos históricos, visitas arquitectónicas y actividades religiosas.',
+
+    valorIdentitario:
+      'Es uno de los principales símbolos patrimoniales y culturales de Marinilla.',
+
+    coords: {
+      lat: 6.1737,
+      lng: -75.3360,
+    },
+
+    lugaresRelacionados: ['26', '24'],
+
+    bibliografia: [
+      {
+        titulo: 'Basílica Menor de Marinilla',
+        url: 'https://es.wikipedia.org/wiki/Marinilla',
+      },
+    ],
+
+    enlacesExternos: [
+      {
+        titulo: 'Alcaldía de Marinilla',
+        url: 'https://marinilla-antioquia.gov.co',
+      },
+    ],
+
+    tags: [
+      'Marinilla',
+      'basílica',
+      'patrimonio',
+      'religión',
+    ],
+
+    imagenes: [
+      '/images/basilica-marinilla/1.png',
+      '/images/basilica-marinilla/2.png',
+    ],
+  }),
+
+  createPlace({
+    id: '26',
+
+    slug: 'casa-cultura-marinilla',
+
+    nombre: 'Casa de la Cultura de Marinilla',
+
+    municipio: 'Marinilla',
+    barrio: 'Centro',
+
+    direccion: 'Sector central de Marinilla',
+
+    horarios:
+      'Lunes a viernes de 8:00 a.m. a 5:00 p.m.',
+
+    tipoLugar: 'comunitario',
+    visibilidad: 'popular',
+
+    categoriasCulturales: [
+      'arte',
+      'memoria',
+      'educación',
+      'comunidad',
+    ],
+
+    capas: [
+      'espacios-comunitarios',
+      'cultura-cotidiana',
+    ],
+
+    descripcionBreve:
+      'Principal espacio cultural y artístico del municipio de Marinilla.',
+
+    historiaContexto:
+      'La Casa de la Cultura de Marinilla articula procesos artísticos y comunitarios ligados a la identidad cultural del Oriente Antioqueño.',
+
+    relatoNarrativo:
+      'Un espacio donde las tradiciones culturales y las expresiones artísticas contemporáneas conviven.',
+
+    ofertaCultural:
+      'Talleres artísticos, danza, teatro, música y procesos comunitarios.',
+
+    valorIdentitario:
+      'Fortalece la memoria cultural y las prácticas artísticas del municipio.',
+
+    coords: {
+      lat: 6.1731,
+      lng: -75.3355,
+    },
+
+    lugaresRelacionados: ['25', '21'],
+
+    bibliografia: [
+      {
+        titulo: 'Casa de la Cultura de Marinilla',
+        url: 'https://marinilla-antioquia.gov.co',
+      },
+    ],
+
+    enlacesExternos: [
+      {
+        titulo: 'Municipio de Marinilla',
+        url: 'https://marinilla-antioquia.gov.co',
+      },
+    ],
+
+    tags: [
+      'Marinilla',
+      'cultura',
+      'arte',
+      'comunidad',
+    ],
+
+    imagenes: [
+      '/images/cultura-marinilla/1.png',
+      '/images/cultura-marinilla/2.png',
+    ],
+  }),
+
+  createPlace({
+    id: '27',
+
+    slug: 'parque-historico-el-retiro',
+
+    nombre: 'Parque Histórico de El Retiro',
+
+    municipio: 'El Retiro',
+    barrio: 'Centro',
+
+    direccion: 'Parque principal de El Retiro',
+
+    horarios:
+      'Espacio público abierto todos los días.',
+
+    tipoLugar: 'histórico',
+    visibilidad: 'popular',
+
+    categoriasCulturales: [
+      'patrimonio',
+      'arquitectura',
+      'memoria',
+      'comunidad',
+    ],
+
+    capas: [
+      'memoria-historica',
+      'cultura-cotidiana',
+    ],
+
+    descripcionBreve:
+      'Espacio patrimonial y urbano representativo de la historia colonial de El Retiro.',
+
+    historiaContexto:
+      'El Retiro conserva parte importante de la arquitectura tradicional y de la historia artesanal del Oriente Antioqueño.',
+
+    relatoNarrativo:
+      'Las calles y fachadas alrededor del parque principal narran procesos históricos ligados a la colonización y al trabajo artesanal.',
+
+    ofertaCultural:
+      'Recorridos patrimoniales, actividades culturales y encuentros comunitarios.',
+
+    valorIdentitario:
+      'Es uno de los referentes históricos y urbanos más importantes de El Retiro.',
+
+    coords: {
+      lat: 6.0582,
+      lng: -75.5034,
+    },
+
+    lugaresRelacionados: ['21', '24'],
+
+    bibliografia: [
+      {
+        titulo: 'Municipio de El Retiro',
+        url: 'https://elretiro-antioquia.gov.co',
+      },
+    ],
+
+    enlacesExternos: [
+      {
+        titulo: 'Alcaldía de El Retiro',
+        url: 'https://elretiro-antioquia.gov.co',
+      },
+    ],
+
+    tags: [
+      'El Retiro',
+      'patrimonio',
+      'arquitectura',
+      'historia',
+    ],
+
+    imagenes: [
+      '/images/el-retiro/1.png',
+      '/images/el-retiro/2.png',
+    ],
+  }),
+
+  createPlace({
+    id: '28',
+
+    slug: 'embalse-y-pueblo-viejo-el-penol',
+
+    nombre: 'Embalse y Pueblo Viejo de El Peñol',
+
+    municipio: 'El Peñol',
+    barrio: 'Zona histórica',
+
+    direccion: 'Sector Embalse El Peñol',
+
+    horarios:
+      'Acceso turístico abierto todos los días.',
+
+    tipoLugar: 'histórico',
+    visibilidad: 'popular',
+
+    categoriasCulturales: [
+      'memoria',
+      'patrimonio',
+      'naturaleza',
+    ],
+
+    capas: [
+      'memoria-historica',
+      'cultura-cotidiana',
+    ],
+
+    descripcionBreve:
+      'Lugar de memoria asociado a la inundación del antiguo municipio de El Peñol.',
+
+    historiaContexto:
+      'La construcción del embalse transformó profundamente el territorio y desplazó el antiguo pueblo de El Peñol.',
+
+    relatoNarrativo:
+      'Las ruinas y relatos del viejo Peñol conservan la memoria de uno de los mayores cambios territoriales de Antioquia.',
+
+    ofertaCultural:
+      'Turismo histórico, recorridos patrimoniales y actividades alrededor del embalse.',
+
+    valorIdentitario:
+      'Representa memoria territorial y transformación cultural del Oriente Antioqueño.',
+
+    coords: {
+      lat: 6.2233,
+      lng: -75.2105,
+    },
+
+    lugaresRelacionados: ['29'],
+
+    bibliografia: [
+      {
+        titulo: 'Embalse El Peñol',
+        url: 'https://es.wikipedia.org/wiki/Embalse_del_Pe%C3%B1ol-Guatap%C3%A9',
+      },
+    ],
+
+    enlacesExternos: [
+      {
+        titulo: 'Turismo Oriente Antioqueño',
+        url: 'https://antioquia.travel',
+      },
+    ],
+
+    tags: [
+      'El Peñol',
+      'embalse',
+      'memoria',
+      'patrimonio',
+    ],
+
+    imagenes: [
+      '/images/el-penol/1.png',
+      '/images/el-penol/2.png',
+    ],
   })
+
 ]
 
 export const invalidPlaces = places
