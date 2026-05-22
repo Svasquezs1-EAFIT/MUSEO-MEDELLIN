@@ -6,7 +6,7 @@ export default function StoriesPage() {
         <p>Espacio editorial para relatos, crónicas y textos conectados con el territorio.</p>
       </div>
 
-      <div className="card">
+      <div className="card" data-aos="fade-up">
         <div className="card-body">
           <h3>Próximamente</h3>
           <p>

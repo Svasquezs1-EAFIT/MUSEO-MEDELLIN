@@ -11,7 +11,9 @@ export default function PlacesPage() {
 
       <div className="grid">
         {places.map((sitio) => (
-          <SiteCard key={sitio.id} sitio={sitio} />
+          <div key={sitio.id} data-aos="fade-up">
+            <SiteCard sitio={sitio} />
+          </div>
         ))}
       </div>
     </section>

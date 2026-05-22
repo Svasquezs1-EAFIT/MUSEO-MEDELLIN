@@ -27,7 +27,7 @@ export default function SiteDetail() {
       <button onClick={() => navigate(-1)} className="back">← Volver</button>
 
       {/* Encabezado con portada y datos básicos */}
-      <header className="detail-header">
+      <header className="detail-header" data-aos="fade-up">
         <img
           src={sitio.imagen}
           alt={sitio.nombre}
@@ -49,35 +49,35 @@ export default function SiteDetail() {
 
       {/* Secciones de contenido */}
       {sitio.descripcion && (
-        <section className="detail-section">
+        <section className="detail-section" data-aos="fade-up">
           <h3>Historia y relevancia</h3>
           <p>{sitio.descripcion}</p>
         </section>
       )}
 
       {sitio.oferta && (
-        <section className="detail-section">
+        <section className="detail-section" data-aos="fade-up">
           <h3>Oferta cultural</h3>
           <p>{sitio.oferta}</p>
         </section>
       )}
 
       {sitio.valorIdentitario && (
-        <section className="detail-section">
+        <section className="detail-section" data-aos="fade-up">
           <h3>Valor identitario</h3>
           <p>{sitio.valorIdentitario}</p>
         </section>
       )}
 
       {sitio.imagenes && sitio.imagenes.length > 0 && (
-        <section className="detail-section">
+        <section className="detail-section" data-aos="fade-up">
           <h3>Galería del lugar</h3>
           <ImageCarousel images={sitio.imagenes} alt={sitio.nombre} />
         </section>
       )}
       
       {/* Mapa + botón "Cómo llegar" */}
-      <section className="detail-section">
+      <section className="detail-section" data-aos="fade-up">
         <h3>Ubicación en el mapa</h3>
 
         <MapView

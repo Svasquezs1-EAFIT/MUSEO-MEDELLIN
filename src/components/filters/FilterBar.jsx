@@ -1,3 +1,5 @@
+import Dropdown from './Dropdown'
+
 export default function FilterBar({
   q,
   municipio,
@@ -16,6 +18,12 @@ export default function FilterBar({
   onClear,
   resultsCount,
 }) {
+  /* Helper: arma las opciones añadiendo una opción "todos" al inicio */
+  const buildOptions = (items, allLabel) => [
+    { value: 'todos', label: allLabel },
+    ...items.map((item) => ({ value: item, label: item })),
+  ]
+
   return (
     <>
       <div className="filters">
@@ -26,44 +34,33 @@ export default function FilterBar({
           onChange={(e) => onQueryChange(e.target.value)}
         />
 
-        <select value={municipio} onChange={(e) => onMunicipioChange(e.target.value)}>
-          <option value="todos">Todos los municipios</option>
-          {municipios.map((item) => (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          ))}
-        </select>
+        <Dropdown
+          ariaLabel="Filtrar por municipio"
+          value={municipio}
+          onChange={onMunicipioChange}
+          options={buildOptions(municipios, 'Todos los municipios')}
+        />
 
-        <select value={tipoLugar} onChange={(e) => onTipoLugarChange(e.target.value)}>
-          <option value="todos">Todos los tipos</option>
-          {tiposLugar.map((item) => (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          ))}
-        </select>
+        <Dropdown
+          ariaLabel="Filtrar por tipo de lugar"
+          value={tipoLugar}
+          onChange={onTipoLugarChange}
+          options={buildOptions(tiposLugar, 'Todos los tipos')}
+        />
 
-        <select value={visibilidad} onChange={(e) => onVisibilidadChange(e.target.value)}>
-          <option value="todos">Todas las visibilidades</option>
-          {visibilidades.map((item) => (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          ))}
-        </select>
+        <Dropdown
+          ariaLabel="Filtrar por visibilidad"
+          value={visibilidad}
+          onChange={onVisibilidadChange}
+          options={buildOptions(visibilidades, 'Todas las visibilidades')}
+        />
 
-        <select
+        <Dropdown
+          ariaLabel="Filtrar por categoría cultural"
           value={categoriaCultural}
-          onChange={(e) => onCategoriaCulturalChange(e.target.value)}
-        >
-          <option value="todos">Todas las categorías</option>
-          {categoriasCulturales.map((item) => (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          ))}
-        </select>
+          onChange={onCategoriaCulturalChange}
+          options={buildOptions(categoriasCulturales, 'Todas las categorías')}
+        />
 
         <button type="button" className="btn" onClick={onClear}>
           Limpiar filtros

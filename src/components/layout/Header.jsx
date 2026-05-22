@@ -1,4 +1,5 @@
-import { Link, NavLink } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 
 const navItems = [
   { to: '/', label: 'Inicio', end: true },
@@ -8,13 +9,52 @@ const navItems = [
 ]
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
+
+  // Cerrar el menú al cambiar de ruta
+  useEffect(() => {
+    setIsOpen(false)
+  }, [location.pathname])
+
+  // Bloquear scroll del body cuando el menú está abierto
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isOpen])
+
+  const toggleMenu = () => setIsOpen((prev) => !prev)
+  const closeMenu = () => setIsOpen(false)
+
   return (
     <header className="topbar">
-      <Link to="/" className="logo">Museo Virtual Medellín</Link>
+      <Link to="/" className="logo" onClick={closeMenu}>
+        Museo Virtual Medellín
+      </Link>
 
-      <nav className="main-nav" aria-label="Navegación principal">
+      {/* Botón hamburguesa: solo visible en móviles */}
+      <button
+        type="button"
+        className={`nav-toggle ${isOpen ? 'is-open' : ''}`}
+        aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
+        aria-expanded={isOpen}
+        aria-controls="main-navigation"
+        onClick={toggleMenu}
+      >
+        <span className="nav-toggle-bar" />
+        <span className="nav-toggle-bar" />
+        <span className="nav-toggle-bar" />
+      </button>
+
+      <nav
+        id="main-navigation"
+        className={`main-nav ${isOpen ? 'is-open' : ''}`}
+        aria-label="Navegación principal"
+      >
         {navItems.map(({ to, label, end }) => (
-          <NavLink key={to} to={to} end={end}>
+          <NavLink key={to} to={to} end={end} onClick={closeMenu}>
             {({ isActive }) => (
               <span style={{ color: isActive ? '#4cc9f0' : '#fff' }}>{label}</span>
             )}
@@ -27,10 +67,14 @@ export default function Header() {
           rel="noopener noreferrer"
           className="osm-attribution"
           title="Atribución de datos del mapa"
+          onClick={closeMenu}
         >
           Datos © OpenStreetMap
         </a>
       </nav>
+
+      {/* Backdrop oscuro detrás del menú móvil */}
+      {isOpen && <div className="nav-backdrop" onClick={closeMenu} />}
     </header>
   )
 }

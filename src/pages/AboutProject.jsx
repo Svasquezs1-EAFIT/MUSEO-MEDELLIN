@@ -12,7 +12,7 @@ export default function AboutProject() {
       </div>
 
       <div className="grid">
-        <article className="card">
+        <article className="card" data-aos="fade-up">
           <div className="card-body">
             <h3>Guía de desarrollo</h3>
             <p>Consulta el documento base del proyecto y su orientación de trabajo.</p>
@@ -20,7 +20,7 @@ export default function AboutProject() {
           </div>
         </article>
 
-        <article className="card">
+        <article className="card" data-aos="fade-up" data-aos-delay="100">
           <div className="card-body">
             <h3>Antioquia 2040</h3>
             <p>Accede al documento de referencia complementario para el proyecto.</p>
